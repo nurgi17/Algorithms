@@ -131,3 +131,56 @@
 // var s = "codeleet", indices = [4,5,6,7,0,2,1,3]
 // console.log(restoreString(s, indices))
 // 1528. Shuffle String END –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+// Codewars
+// My version
+// function rgb(r, g, b) {
+//   return decimalToHexadecimal(r) + decimalToHexadecimal(g) + decimalToHexadecimal(b)
+// }
+
+// function decimalToHexadecimal (decimal) {
+//   if (decimal < 0) decimal = 0
+//   if (decimal > 255) decimal = 255
+//   let temp = Math.floor(decimal / 16) // 10
+//   let chunk = decimal % 16 // 13
+//   let result = returnABCDEF(chunk) + ''
+//   while (temp !== 0) {
+//     chunk = temp % 16 // 
+//     temp = Math.floor(temp / 16) // 0.625
+//     result += returnABCDEF(chunk)
+//   }
+//   return result.length == 1 ? ('0' + result) : result.split('').reverse().join('')
+// }
+
+// function returnABCDEF (hexadecimal) {
+//   switch (hexadecimal) {
+//       case 10:
+//         return 'A'
+//       case 11:
+//         return 'B'
+//       case 12:
+//         return 'C'
+//       case 13:
+//         return 'D'
+//       case 14:
+//         return 'E'
+//       case 15:
+//         return 'F'
+//       default:
+//         return hexadecimal
+//   }
+// }
+
+// Easy version
+// function rgb (r,g,b) {
+//   return toHex(r) + toHex(g) + toHex(b)
+// }
+
+// function toHex (decimal) {
+//   if (decimal < 0) return '00'
+//   if (decimal > 255) return 'FF'
+//   return ('0' + decimal.toString(16)).slice(-2).toUpperCase()
+// }
+
+// console.log(rgb(285,210,7))
